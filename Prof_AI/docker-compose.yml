@@ -1,0 +1,13 @@
+
+
+services:
+  voice-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: aum-test
+    env_file:
+      - .env
+    restart: unless-stopped
